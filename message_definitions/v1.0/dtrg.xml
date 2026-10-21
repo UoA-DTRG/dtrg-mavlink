@@ -9,5 +9,18 @@
 			<description>Custom DTRG testing messages</description>
 			<field type="float[6]" name="offboard_sp">Setpoint vector</field>
 		</message>
+		<message id="6111" name="SIX_AXIS_LOAD_CELL">
+			<description>This message contains sensor data from a connected 6-axis force-torque sensor.</description>
+			<field type="uint8_t" name="target_system">System ID</field>
+			<field type="uint8_t" name="target_component">Component ID</field>
+			<field type="uint64_t" name="usec" units="us">Timestamp (UNIX time or since system boot)</field>
+			<field type="uint8_t" name="frame" enum="MAV_FRAME">Orrentation of the sensor</field>
+			<field type="float" name="fx" units="N">Force in X</field>
+			<field type="float" name="fy" units="N">Force in Y</field>
+			<field type="float" name="fz" units="N">Force in Z</field>
+			<field type="float" name="mx" units="Nm">Moment about X</field>
+			<field type="float" name="my" units="Nm">Moment about Y</field>
+			<field type="float" name="mz" units="Nm">Moment about Z</field>
+		</message>
 	</messages>
 </mavlink>
